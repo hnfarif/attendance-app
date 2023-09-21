@@ -1,0 +1,16 @@
+{
+  "name": "attendance-app",
+  "version": "1.0.0",
+  "description": "Attendance app for ICStar Hackathon",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch"
+  },
+  "keywords": [
+    "attendance"
+  ],
+  "author": "Hanif Arif",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
