@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS styles */
+      body {
+        background-color: #f0f4f8;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Attendance</title>
+  </head>
+  <body class="font-sans">
+    <header class="bg-[#6366F1] py-4">
+      <!-- Navbar -->
+      <nav class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="text-white text-xl font-semibold">Company Name</a>
+
+        <!-- Menu -->
+        <ul class="flex space-x-4">
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-200 flex items-center"
+            >
+              <i class="fas fa-home mr-2"></i> Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-200 flex items-center"
+            >
+              <i class="fas fa-history mr-2"></i> History
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-200 flex items-center"
+            >
+              <i class="fas fa-arrow-right-from-bracket mr-2"></i> Leaves
+            </a>
+          </li>
+        </ul>
+        <!-- Profile Button -->
+        <div class="relative group">
+          <button
+            class="text-white group-hover:text-blue-200 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 inline-block mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2m-4-12a6 6 0 11-12 0 6 6 0 0112 0z"
+              />
+            </svg>
+            <span class="hidden group-hover:inline-block">John Doe</span>
+          </button>
+          <div
+            class="hidden group-hover:block absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg"
+          >
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Profile</h3>
+              <p class="text-gray-600 text-sm mt-2">Account Name: John Doe</p>
+              <p class="text-gray-600 text-sm mt-2">Position: Employee</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    </header>
+    <main class="container mx-auto">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- History of Leave -->
+          <div
+            class="bg-rose-700 border border-gray-200 rounded-lg p-8 md:p-12"
+          >
+            <h2 class="text-white text-3xl font-extrabold mb-2">
+              List of Leave
+            </h2>
+            <p class="text-lg font-normal text-white mb-4">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem ad
+              placeat atque excepturi obcaecati quibusdam minima beatae tempora,
+              alias consequatur recusandae minus molestias corporis et
+              reprehenderit cupiditate omnis similique? Harum.
+            </p>
+            <a
+              href="#"
+              class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-black rounded-lg bg-white focus:ring-4 focus:ring-blue-300"
+            >
+              <span
+                >Show History of Leave <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </a>
+          </div>
+          <!-- History of Attendace -->
+          <div
+            class="bg-teal-700 border border-gray-200 rounded-lg p-8 md:p-12"
+          >
+            <h2 class="text-white text-3xl font-extrabold mb-2">
+              List of Leave
+            </h2>
+            <p class="text-lg font-normal text-white mb-4">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem ad
+              placeat atque excepturi obcaecati quibusdam minima beatae tempora,
+              alias consequatur recusandae minus molestias corporis et
+              reprehenderit cupiditate omnis similique? Harum.
+            </p>
+            <a
+              href="#"
+              class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-black rounded-lg bg-white focus:ring-4 focus:ring-blue-300"
+            >
+              <span
+                >Show History of Leave <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

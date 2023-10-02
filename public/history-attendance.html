@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS styles */
+      body {
+        background-color: #f0f4f8;
+      }
+      .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Attendance</title>
+  </head>
+  <body class="font-sans">
+    <header class="bg-[#6366F1] py-4">
+      <!-- Navbar -->
+      <nav class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="text-white text-xl font-semibold">Company Name</a>
+
+        <!-- Menu -->
+        <ul class="flex space-x-4">
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-200 flex items-center"
+            >
+              <i class="fas fa-home mr-2"></i> Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-200 flex items-center"
+            >
+              <i class="fas fa-history mr-2"></i> History
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-200 flex items-center"
+            >
+              <i class="fas fa-arrow-right-from-bracket mr-2"></i> Leaves
+            </a>
+          </li>
+        </ul>
+        <!-- Profile Button -->
+        <div class="relative group">
+          <button
+            class="text-white group-hover:text-blue-200 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 inline-block mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2m-4-12a6 6 0 11-12 0 6 6 0 0112 0z"
+              />
+            </svg>
+            <span class="hidden group-hover:inline-block">John Doe</span>
+          </button>
+          <div
+            class="hidden group-hover:block absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg"
+          >
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">Profile</h3>
+              <p class="text-gray-600 text-sm mt-2">Account Name: John Doe</p>
+              <p class="text-gray-600 text-sm mt-2">Position: Employee</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    </header>
+
+    <div class="container mx-auto mt-8 p-4">
+      <div class="flex">
+        <h1 class="text-2xl font-bold">History Attendance</h1>
+        <button
+          id="filterButton"
+          class="bg-gray-400 hover:bg-gray-600 text-white py-2 px-4 rounded ml-auto"
+        >
+          <i class="fa-solid fa-filter"></i> Filter
+        </button>
+      </div>
+
+      <div id="attendanceList" class="mt-4">
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Clock In
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Clock Out
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Date
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Status
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Time
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">9:00 AM</td>
+                  <td class="px-6 py-4 whitespace-nowrap">5:00 PM</td>
+                  <td class="px-6 py-4 whitespace-nowrap">2023-09-18</td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border border-green-400"
+                      >Normal</span
+                    >
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">8 hours</td>
+                </tr>
+                <!-- Add more rows here for each attendance log -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="filterModal"
+      class="hidden fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50"
+    >
+      <div class="bg-white p-4 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Filter Options</h2>
+
+        <label class="block font-semibold">Filter by:</label>
+        <div>
+          <input
+            type="radio"
+            id="filterDay"
+            name="filterType"
+            value="day"
+            class="mr-2"
+            checked
+          />
+          <label for="filterDay" class="mr-4">Day</label>
+
+          <input
+            type="radio"
+            id="filterWeek"
+            name="filterType"
+            value="week"
+            class="mr-2"
+          />
+          <label for="filterWeek" class="mr-4">Week</label>
+
+          <input
+            type="radio"
+            id="filterMonth"
+            name="filterType"
+            value="month"
+            class="mr-2"
+          />
+          <label for="filterMonth">Month</label>
+        </div>
+
+        <div class="mb-4">
+          <div id="monthCalendar" class="mt-4 hidden">
+            <label for="monthFilter" class="block font-semibold"
+              >Select Month:</label
+            >
+            <input
+              type="month"
+              id="monthFilter"
+              class="w-full border rounded p-2"
+            />
+          </div>
+        </div>
+        <!-- Filter by Status -->
+        <div class="mb-4">
+          <label for="statusFilter" class="block font-semibold"
+            >Filter by Status:</label
+          >
+          <select id="statusFilter" class="w-full border rounded p-2">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+            <option value="late">Late</option>
+          </select>
+        </div>
+
+        <button
+          onclick="filterData()"
+          class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+        >
+          Apply Filter
+        </button>
+        <button
+          onclick="closeModal()"
+          class="bg-gray-300 hover:bg-gray-400 text-gray-600 py-2 px-4 rounded ml-2"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+    <script>
+      document
+        .getElementById("filterMonth")
+        .addEventListener("change", toggleMonthCalendar);
+
+      document
+        .getElementById("filterButton")
+        .addEventListener("click", showFilterModal);
+      function openModal() {
+        const filterModal = document.getElementById("filterModal");
+        filterModal.classList.remove("hidden");
+      }
+
+      function closeModal() {
+        const filterModal = document.getElementById("filterModal");
+        filterModal.classList.add("hidden");
+      }
+
+      function showFilterModal() {
+        openModal();
+      }
+
+      function toggleMonthCalendar() {
+        const monthCalendar = document.getElementById("monthCalendar");
+        const monthRadio = document.getElementById("filterMonth");
+        const dateRadio = document.getElementById("filterDay");
+        const weekRadio = document.getElementById("filterWeek");
+
+        if (monthRadio.checked) {
+          monthCalendar.classList.remove("hidden");
+        } else {
+          monthCalendar.classList.add("hidden");
+        }
+
+        if (!monthRadio.checked && (dateRadio.checked || weekRadio.checked)) {
+          monthCalendar.classList.add("hidden");
+        }
+      }
+
+      document
+        .getElementById("filterMonth")
+        .addEventListener("change", toggleMonthCalendar);
+
+      document
+        .getElementById("filterDay")
+        .addEventListener("change", toggleMonthCalendar);
+      document
+        .getElementById("filterWeek")
+        .addEventListener("change", toggleMonthCalendar);
+    </script>
+  </body>
+</html>
