@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soft UI Dashboard Tailwind</title>
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Main Styling -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body
+    class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500"
+  >
+    <!-- sidenav  -->
+    <aside
+      class="max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-none transition-transform duration-200 xl:left-0 xl:translate-x-0 xl:bg-transparent"
+    >
+      <div class="h-19.5">
+        <i
+          class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden"
+          sidenav-close
+        ></i>
+        <a
+          class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-slate-700"
+          href="javascript:;"
+          target="_blank"
+        >
+          <span
+            class="ml-1 font-semibold transition-all duration-200 ease-nav-brand"
+            >Attendance Dashboard</span
+          >
+        </a>
+      </div>
+
+      <hr
+        class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent"
+      />
+
+      <div
+        class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full"
+      >
+        <ul class="flex flex-col pl-0 mb-0">
+          <li class="mt-0.5 w-full">
+            <a
+              class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold transition-colors hover:bg-[#6366F1] hover:rounded-lg hover:text-white"
+              href="../pages/dashboard.html"
+            >
+              <i class="fa-solid fa-grip"></i>
+              <span
+                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft"
+              >
+                Dashboard</span
+              >
+            </a>
+          </li>
+
+          <li class="mt-0.5 w-full">
+            <a
+              class="py-2.7 bg-[#6366F1] text-white rounded-lg text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-[#6366F1] hover:rounded-lg hover:text-white"
+              href="../pages/leave-admin.html"
+            >
+              <i class="fa-solid fa-user-xmark"></i>
+              <span
+                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft"
+              >
+                Leaves</span
+              >
+            </a>
+          </li>
+
+          <li class="mt-0.5 w-full">
+            <a
+              class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-[#6366F1] hover:rounded-lg hover:text-white"
+              href="../pages/report.html"
+            >
+              <i class="fa-solid fa-chart-simple"></i>
+              <span
+                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft"
+              >
+                Report</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- end sidenav -->
+
+    <main
+      class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200"
+    >
+      <!-- Navbar -->
+      <nav
+        class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start mb-8"
+        navbar-main
+        navbar-scroll="true"
+      >
+        <div
+          class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit"
+        >
+          <h6 class="mb-0 font-bold capitalize">Leave Request</h6>
+
+          <div
+            class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto"
+          >
+            <ul
+              class="flex flex-row justify-end pl-0 mb-0 list-none md:ml-auto md-max:w-full"
+            >
+              <li class="flex items-center">
+                <a
+                  href="#"
+                  class="block px-0 py-2 font-semibold transition-all ease-nav-brand text-sm text-slate-500"
+                >
+                  <i class="fa fa-user sm:mr-1"></i>
+                  <span class="hidden sm:inline">John Doe</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end Navbar -->
+
+      <div class="w-full px-6 py-6 mx-auto">
+        <div
+          class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div class="flex justify-between">
+            <div class="flex">
+              <img
+                class="w-10 h-10 rounded-full my-auto"
+                src="/public/assets/img/orang.jpg"
+                alt="Rounded avatar"
+              />
+              <div class="flex-col">
+                <p class="text-sm ml-3 mb-0 flex">Employee Name</p>
+                <h6 class="text-md ml-3 mb-0">John Doe</h6>
+              </div>
+            </div>
+
+            <div class="flex-col">
+              <p class="text-sm ml-3 mb-0 flex">Employee ID</p>
+              <h6 class="text-md ml-3 mb-0">123456</h6>
+            </div>
+            <div class="flex-col">
+              <p class="text-sm ml-3 mb-0 flex">Status</p>
+              <span
+                class="bg-gradient-to-tl from-sky-300 to-blue-500 px-3.6 text-xs rounded-1.8 py-2.2 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
+                >New</span
+              >
+            </div>
+          </div>
+
+          <div class="flex justify-between mt-10">
+            <div class="flex-col">
+              <div>
+                <p class="text-sm mb-0 flex">Leave Date</p>
+                <h6 class="text-md m-0 flex">
+                  23 September - 26 September 2023
+                </h6>
+                <p class="text-sm mb-0 flex">(3 Days)</p>
+              </div>
+
+              <div class="mt-5">
+                <p class="text-sm mb-0 flex">Leave Type</p>
+                <h6 class="text-md m-0 flex">Sick Leave</h6>
+              </div>
+
+              <div class="mt-5">
+                <p class="text-sm mb-0 flex">Reasons</p>
+                <h6 class="text-md m-0 flex">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus, porro.
+                </h6>
+              </div>
+            </div>
+            <div class="flex-col">
+              <p class="text-sm mb-0 flex">Attachment</p>
+
+              <div class="flex items-center justify-center w-full">
+                <label
+                  for="dropzone-file"
+                  class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                >
+                  <div class="flex flex-col items-center justify-center">
+                    <svg
+                      class="w-8 h-8 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 16"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                      />
+                    </svg>
+                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                      <span class="font-semibold">Click to see</span>
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      SVG, PNG, JPG or PDF (MAX 2mb)
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <hr class="h-px mt-6 bg-slate-400" />
+
+          <div class="flex justify-end">
+            <button
+              type="button"
+              class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 ml-auto"
+            >
+              Reject
+            </button>
+            <button
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Approve
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- plugin for charts  -->
+  <script src="../assets/js/plugins/chartjs.min.js" async></script>
+  <!-- plugin for scrollbar  -->
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js" async></script>
+
+  <script src="../assets/js/nav-pills.js" async></script>
+  <!-- flowbite -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <!-- main script file  -->
+  <script src="../assets/js/soft-ui-dashboard-tailwind.js" async></script>
+</html>
